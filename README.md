@@ -1,2 +1,7 @@
-# movie_recommender
-week 11 project
+# Recommender
+This is a Recommender
+
+### Usage
+```bash
+python recommender.py
+```
