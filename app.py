@@ -45,7 +45,7 @@ with st.sidebar:
 if page == "--------":
     # slogan
     st.write("""
-    *Movies are like magic tricks (Jeff Bridges)*
+    *"Movies are like magic tricks" - Jeff Bridges*
     """)
     # blank space
     st.write("")
