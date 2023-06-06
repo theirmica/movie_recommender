@@ -15,7 +15,7 @@ def nmf_recommender(query, nmf_model, titles, k=10):
     # 1. construct new_user-item dataframe given the query
     
     #into dataframe
-    new_user_dataframe =  pd.DataFrame(query, columns=movies, index=["new_user"])
+    new_user_dataframe =  pd.DataFrame(query, columns=titles, index=["new_user"])
     #new_user_dataframe
     
     # using the same imputation as training data
@@ -37,7 +37,7 @@ def nmf_recommender(query, nmf_model, titles, k=10):
     #R_hat_new_user_matrix
     # get as dataframe for a better visualizarion
     R_hat_new_user = pd.DataFrame(data=R_hat_new_user_matrix,
-                         columns=movies,
+                         columns=titles,
                          index = ['new_user'])
     #R_hat_new_user
     query.keys()
