@@ -7,6 +7,9 @@ from IPython.display import HTML
 import pickle
 import json
 
+#prediction models
+from recommenders import neighbour_recommender, nmf_recommender
+
 import streamlit as st
 from st_aggrid import AgGrid
 
@@ -172,5 +175,10 @@ else:
     #load user query
     user_query = json.load(open("user_query.json"))
     
-    
+    # Handling recommend button click
+    if recommend_button:
+        if recommender == "NMF Recommender":
+            recommendations = nmf_recommender(user_query)
+        elif recommender == "Distance Recommender":
+            recommendations = distance_recommender(user_query)
     

@@ -71,7 +71,7 @@ def nmf_recommender(query, nmf_model, titles, k=10):
        
    # return NotImplementedError
 
-def cos_sim_recommender(query, cos_sim_model, titles, k=10):
+def neighbour_recommender(query, cos_sim_model, titles, k=10):
     """This is an cosine-similarity-based recommender"""
     # collaborative filtering = look at ratings only!
 #def recommend_neighborhood(query, model, ratings, k=10):
