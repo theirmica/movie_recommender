@@ -1,13 +1,16 @@
-"""
-In this script we define functions for the recommender web
-application
-"""
+import pickle
 
 with open('distance_recommender_maika.pkl', 'rb') as file:
     DISTANCE_MODEL = pickle.load(file)
 
 with open('nmf_model_maika.pkl', 'rb') as file:
     NMF_MODEL = pickle.load(file)
+
+"""
+In this script we define functions for the recommender web
+application
+"""
+
 
 
 def nmf_recommender(query, NMF_MODEL, movies, k=10):
