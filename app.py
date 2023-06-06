@@ -180,5 +180,5 @@ else:
         if recommender == "NMF Recommender":
             recommendations = nmf_recommender(user_query)
         elif recommender == "Distance Recommender":
-            recommendations = distance_recommender(user_query)
+            recommendations = neighbour_recommender(user_query)
     
