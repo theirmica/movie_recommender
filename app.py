@@ -8,7 +8,7 @@ import pickle
 import json
 
 #prediction models
-from recommenders import neighbour_recommender, nmf_recommender
+from recommenders import distance_recommender, nmf_recommender
 
 import streamlit as st
 from st_aggrid import AgGrid
@@ -180,5 +180,5 @@ else:
         if recommender == "NMF Recommender":
             recommendations = nmf_recommender(user_query)
         elif recommender == "Distance Recommender":
-            recommendations = neighbour_recommender(user_query)
+            recommendations = distance_recommender(user_query)
     

@@ -3,7 +3,7 @@ In this script we define functions for the recommender web
 application
 """
 
-def nmf_recommender(query, nmf_model, titles, k=10):
+def nmf_recommender(query, NMF_MODEL, movies, k=10):
     """This is an nmf-based recommender"""
     
    # def recommend_nmf(query, loaded_model, k=10):
@@ -71,7 +71,7 @@ def nmf_recommender(query, nmf_model, titles, k=10):
        
    # return NotImplementedError
 
-def neighbour_recommender(query, cos_sim_model, titles, k=10):
+def distance_recommender(query, DISTANCE_MODEL, movies, k=10):
     """This is an cosine-similarity-based recommender"""
     # collaborative filtering = look at ratings only!
 #def recommend_neighborhood(query, model, ratings, k=10):
