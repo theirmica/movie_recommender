@@ -17,10 +17,10 @@ BEST_MOVIES.rename(
     )
 TITLES = ["---"] + list(BEST_MOVIES['title'].sort_values()) 
 
-with open('distance_recommender.pkl', 'rb') as file:
+with open('distance_recommender_maika.pkl', 'rb') as file:
     DISTANCE_MODEL = pickle.load(file)
 
-with open('nmf_model1.pkl', 'rb') as file:
+with open('nmf_model_maika.pkl', 'rb') as file:
     NMF_MODEL = pickle.load(file)
 
 # sidebar
