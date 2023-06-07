@@ -13,6 +13,9 @@ from recommenders import distance_recommender, nmf_recommender
 import streamlit as st
 from st_aggrid import AgGrid
 
+Ratings = pd.read_csv(r"C:\Users\maika\spiced\continous_integration\movie_recommender\ratings.csv", sep=',')
+
+
 BEST_MOVIES = pd.read_csv("best_movies.csv")
 BEST_MOVIES.rename(
     index=lambda x: x+1,
@@ -178,7 +181,7 @@ else:
     # Handling recommend button click
     if recommend_button:
         if recommender == "NMF Recommender":
-            recommendations = nmf_recommender(user_query)
+            recommenders = nmf_recommender(user_query)
         elif recommender == "Distance Recommender":
-            recommendations = distance_recommender(user_query)
+            recommenders = distance_recommender(user_query)
     
