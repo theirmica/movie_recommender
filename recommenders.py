@@ -61,7 +61,7 @@ def nmf_recommender(query, NMF_MODEL, k=10): #cut movies out
        
    # return NotImplementedError
 
-def distance_recommender(query, DISTANCE_MODEL, Ratings, k=10): #again movies are out
+def distance_recommender(query, DISTANCE_MODEL, ratings, k=10): #again movies are out
     """This is an cosine-similarity-based recommender"""
     # collaborative filtering = look at ratings only!
 #def recommend_neighborhood(query, model, ratings, k=10):
@@ -74,7 +74,7 @@ def distance_recommender(query, DISTANCE_MODEL, Ratings, k=10): #again movies ar
     # construct a user vector
     new_user_dataframe =  pd.DataFrame(query, columns=model.columns, index=['new_user'])
     #new_user_dataframe
-    new_user_dataframe_imputed = new_user_dataframe.fillna(Ratings.mean())
+    new_user_dataframe_imputed = new_user_dataframe.fillna(ratings.mean())
     
     # 2. scoring
     
@@ -99,7 +99,7 @@ def distance_recommender(query, DISTANCE_MODEL, Ratings, k=10): #again movies ar
                                 )
 
     #neighbors_df# only look at ratings for users that are similar!
-    neighborhood = Ratings.iloc[neighbor_ids[0]]
+    neighborhood = ratings.iloc[neighbor_ids[0]]
     #neighborhood
     
     new_user_query.keys()

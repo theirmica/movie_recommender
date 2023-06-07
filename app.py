@@ -14,7 +14,7 @@ import streamlit as st
 from st_aggrid import AgGrid
 
 #ratings = pd.read_csv(r"C:\Users\maika\spiced\continous_integration\movie_recommender\ratings.csv", sep=',', axis=0)
-ratings = pd.read_csv(r"C:\Users\maika\spiced\bergamot-encoder-encounter-notes\week_10\Recommender_Systems\ml-latest-small\ratings.csv", sep=',')
+#ratings = pd.read_csv(r"C:\Users\maika\spiced\bergamot-encoder-encounter-notes\week_10\Recommender_Systems\ml-latest-small\ratings.csv", sep=',')
 
 
 BEST_MOVIES = pd.read_csv("best_movies.csv")
@@ -185,4 +185,7 @@ else:
             recommendations = nmf_recommender(user_query)
         elif recommender == "Distance Recommender":
             recommendations = distance_recommender(user_query)
+            
+    #defining output
+    st.write("###")
     
