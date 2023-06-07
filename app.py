@@ -181,7 +181,7 @@ else:
     # Handling recommend button click
     if recommend_button:
         if recommender == "NMF Recommender":
-            recommenders = nmf_recommender(user_query)
+            recommendations = nmf_recommender(user_query)
         elif recommender == "Distance Recommender":
-            recommenders = distance_recommender(user_query)
+            recommendations = distance_recommender(user_query)
     

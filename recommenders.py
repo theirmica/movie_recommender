@@ -7,7 +7,7 @@ application
 
 
 
-def nmf_recommender(query, NMF_MODEL, movies, k=10):
+def nmf_recommender(query, NMF_MODEL, k=10): #cut movies out
     """This is an nmf-based recommender"""
     
    # def recommend_nmf(query, loaded_model, k=10):
@@ -54,28 +54,14 @@ def nmf_recommender(query, NMF_MODEL, movies, k=10):
     ranked = R_hat_new_user_filtered.T.sort_values(by=["new_user"], ascending=False).index.tolist()
     #ranked
     recommendations = ranked[:10]
-   # recommendations
-    
-    # 2. scoring
-    
-        # calculate the score with the NMF model
-     
-
-
-    
-    # 3. ranking
-    
-        # filter out movies already seen by the user
-        
-
-        # return the top-k highest rated movie ids or titles
+  
   
     return recommendations
     
        
    # return NotImplementedError
 
-def distance_recommender(query, DISTANCE_MODEL, movies, k=10):
+def distance_recommender(query, DISTANCE_MODEL, Ratings, k=10): #again movies are out
     """This is an cosine-similarity-based recommender"""
     # collaborative filtering = look at ratings only!
 #def recommend_neighborhood(query, model, ratings, k=10):
