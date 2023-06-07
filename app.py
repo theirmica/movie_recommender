@@ -13,7 +13,7 @@ from recommenders import distance_recommender, nmf_recommender
 import streamlit as st
 from st_aggrid import AgGrid
 
-Ratings = pd.read_csv(r"C:\Users\maika\spiced\continous_integration\movie_recommender\ratings.csv", sep=',', axis=0)
+ratings = pd.read_csv(r"C:\Users\maika\spiced\continous_integration\movie_recommender\ratings.csv", sep=',', axis=0)
 
 
 BEST_MOVIES = pd.read_csv("best_movies.csv")
